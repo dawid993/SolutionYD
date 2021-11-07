@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_have_same_currency_as_parent_invoic</fullName>
+    <active>true</active>
+    <description>Position has to have the same currency as parent invoice.</description>
+    <errorConditionFormula>TEXT(CurrencyIsoCode) !=  TEXT(Invoice__r.CurrencyIsoCode)</errorConditionFormula>
+    <errorMessage>Can&apos;t have a different currency than parent invoice.</errorMessage>
+</ValidationRule>
